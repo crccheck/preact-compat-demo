@@ -1,0 +1,27 @@
+{
+  "main": "index.js",
+  "scripts": {
+    "build": "browserify index.js -t aliasify -t babelify -o bundle.js"
+  },
+  "aliasify": {
+    "aliases": {
+      "react": "preact-compat",
+      "react-dom": "preact-compat",
+      "create-react-class": "preact-compat/lib/create-react-class"
+    }
+  },
+    "private": true,
+  "dependencies": {
+    "aliasify": "^2.1.0",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-plugin-module-resolver": "^2.7.1",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-env": "^1.5.2",
+    "babel-preset-react": "^6.24.1",
+    "babelify": "^7.3.0",
+    "browserify": "^14.4.0",
+    "preact": "^8.1.0",
+    "preact-compat": "^3.16.0",
+    "react-thing": "^1.0.1"
+  }
+}
